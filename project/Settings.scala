@@ -12,7 +12,7 @@ object Settings {
   val root = common ++ Seq(
     resolvers ++= Resolver.root,
     libraryDependencies ++= Dependency.root,
-    javaOptions in Test ++= Seq("-Dconfig.file=conf/root-dev.conf"),
+    javaOptions ++= Seq("-Dconfig.file=conf/root-dev.conf"),
     testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
   )
 
