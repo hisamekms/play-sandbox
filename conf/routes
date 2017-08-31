@@ -13,3 +13,6 @@ GET     /message                    controllers.AsyncController.message
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 ->      /admin                      admin.Routes
+
+GET /oauth2/google/callback         controllers.googleapi.Oauth2Controller.callback
+GET /oauth2/google                  controllers.googleapi.Oauth2Controller.index
